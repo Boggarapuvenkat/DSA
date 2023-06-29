@@ -1,0 +1,26 @@
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int linear_search(int arr[],int n,int no)
+{
+    int position;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i] == no)
+        position = i;
+    }
+    return position;
+}
+int main()
+{
+    int arr[] = {10,20,30,0,1,0,2};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int no;
+    cin>>no;
+    
+    int position = linear_search(arr,n,no);
+    cout<<"The given "<<no<<" is in the array at this poition "<<position; 
+
+    return 0;
+}
