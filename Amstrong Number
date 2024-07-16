@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int order(int n)
+{
+    int x=0;
+    while(n!=0)
+    {
+        x++;
+        n = n/10;
+    }
+    return x;
+}
+int isamstrong(int n,int len)
+{
+    int sum=0;
+    while(n!=0)
+    {
+        int temp = n%10;
+        sum = sum+pow(temp,len);
+        n=n/10;
+    }
+    return sum;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int len = order(n);
+    int ans = isamstrong(n,len);
+    if(n == ans)
+    cout<<"Amstrong Number!!";
+    else
+    cout<<"Not an Amstrong Number!!";
+    
+    return 0;
+}
